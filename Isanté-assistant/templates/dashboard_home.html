@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Chatbot Assurance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/dashboard">
+                <i class="fas fa-chart-line"></i> Tableau de Bord
+            </a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/dashboard/notifications">
+                    <i class="fas fa-bell"></i> Notifications
+                    {% if unread_notifications_count > 0 %}
+                    <span class="badge bg-danger">{{ unread_notifications_count }}</span>
+                    {% endif %}
+                </a>
+                <a class="nav-link" href="/dashboard/analytics">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </a>
+                <a class="nav-link" href="/dashboard/claims-analysis">
+                    <i class="fas fa-file-medical"></i> Réclamations
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <!-- Métriques principales -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-robot"></i> Requêtes Total
+                        </h5>
+                        <h2>{{ performance.total_queries }}</h2>
+                        <p class="card-text">24 dernières heures</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-check-circle"></i> Taux de Succès
+                        </h5>
+                        <h2>{{ performance.success_rate }}%</h2>
+                        <p class="card-text">Requêtes réussies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-info text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-clock"></i> Temps de Réponse
+                        </h5>
+                        <h2>{{ performance.avg_response_time }}s</h2>
+                        <p class="card-text">Moyenne</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-warning text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-smile"></i> Satisfaction
+                        </h5>
+                        <h2>{{ performance.user_satisfaction }}/5</h2>
+                        <p class="card-text">Score utilisateur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphiques -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><i class="fas fa-chart-pie"></i> Performance par Agent</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="agentPerformanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><i class="fas fa-chart-line"></i> Tendances de Satisfaction</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="satisfactionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Graphique de performance par agent
+        const agentCtx = document.getElementById('agentPerformanceChart').getContext('2d');
+        new Chart(agentCtx, {
+            type: 'doughnut',
+            data: {
+                labels: {{ agent_performance.keys() | list | tojson }},
+                datasets: [{
+                    data: {{ agent_performance.values() | list | tojson }},
+                    backgroundColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#4BC0C0'
+                    ]
+                }]
+            }
+        });
+
+        // Graphique de satisfaction
+        const satisfactionCtx = document.getElementById('satisfactionChart').getContext('2d');
+        new Chart(satisfactionCtx, {
+            type: 'line',
+            data: {
+                labels: {{ feedback_stats.trends.dates | tojson }},
+                datasets: [{
+                    label: 'Satisfaction Utilisateur',
+                    data: {{ feedback_stats.trends.scores | tojson }},
+                    borderColor: '#36A2EB',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 5
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+    

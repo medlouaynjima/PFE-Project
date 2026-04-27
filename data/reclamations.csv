@@ -1,0 +1,51 @@
+id,date_reclamation,text_reclamation,status,type,id_medecin,id_adherent,num_dossier
+REC001,2024-02-15,"Pourquoi le remboursement de mon fils Youssef prend-il plus de 30 jours alors que le délai normal est de 15 jours ?",EnTraitement,delai_remboursement,AD003,AD001,DOS001
+REC002,2024-02-16,"Le montant remboursé pour les analyses de ma fille Amira ne correspond pas à mes factures. Pourriez-vous vérifier le calcul ?",Resolu,montant_remboursement,AD003,AD001,DOS002
+REC003,2024-02-17,"Le ticket modérateur de 25% appliqué pour le dossier de ma fille Rania semble incorrect. Comment est-il calculé ?",EnTraitement,ticket_moderateur,AD003,AD002,DOS003
+REC004,2024-02-18,"Je n'ai pas reçu de confirmation de réception du dossier de ma fille Rania. Est-il bien enregistré ?",Invalid,delai_remboursement,AD003,AD002,DOS004
+REC005,2024-02-19,"Le reste à payer de 180.25 DT pour le dossier de mon épouse Nour est beaucoup plus élevé que prévu. Pouvez-vous réviser le calcul ?",Resolu,reste_a_payer,AD003,AD005,DOS005
+REC006,2024-02-20,"Les analyses de mon fils Adam ne sont pas prises en charge alors qu'elles sont prescrites par le Dr. Karim. Pourquoi ?",EnTraitement,analyses,AD003,AD005,DOS006
+REC007,2024-02-21,"Le dossier de mon fils Sami est en attente depuis plus de 20 jours. Quel est le délai normal de traitement ?",EnTraitement,delai_remboursement,AD003,AD006,DOS007
+REC008,2024-02-22,"Le ticket modérateur de 30% pour le dossier de ma fille Leila a changé sans préavis. Est-ce normal ?",Resolu,ticket_moderateur,AD003,AD006,DOS008
+REC009,2024-02-23,"Je n'ai pas reçu de réponse à ma réclamation concernant le dossier de mon fils Karim. Comment puis-je suivre son statut ?",Invalid,delai_remboursement,AD003,AD008,DOS009
+REC010,2024-02-24,"Les frais de pharmacie de ma fille Sarah ne sont pas remboursés alors que les médicaments sont sur la liste des remboursables. Pourquoi ?",EnTraitement,pharmacie,AD003,AD008,DOS010
+REC011,2024-02-25,"Le montant total remboursé pour le dossier de mon fils Mohamed ne correspond pas à mes dépenses réelles. Pouvez-vous vérifier ?",Resolu,montant_remboursement,AD003,AD010,DOS011
+REC012,2024-02-26,"La réclamation concernant le dossier de mon fils Ali a été rejetée sans explication. Pourriez-vous me donner plus de détails ?",EnTraitement,rejet,AD003,AD012,DOS012
+REC013,2024-02-27,"Les frais de radiologie de ma fille Fatma ne sont pas pris en charge alors qu'ils sont nécessaires. Quelle est la procédure ?",EnTraitement,radio,AD003,AD012,DOS013
+REC014,2024-02-28,"Le reste à payer de 145.25 DT pour le dossier de mon fils Yassine est calculé différemment de d'habitude. Y a-t-il eu un changement de politique ?",Resolu,reste_a_payer,AD003,AD013,DOS014
+REC015,2024-02-29,"Le dossier de ma fille Nour est en attente depuis plus d'un mois. Comment puis-je accélérer le traitement ?",EnTraitement,delai_remboursement,AD003,AD013,DOS015
+REC016,2024-03-01,"Les montants des médicaments remboursés pour le dossier de mon fils Amine ne correspondent pas aux prix de la pharmacie. Pourquoi ?",Resolu,pharmacie,AD003,AD015,DOS016
+REC017,2024-03-02,"Je n'ai pas reçu de confirmation de réception des documents pour le dossier de mon fils Omar. Sont-ils bien arrivés ?",EnTraitement,delai_remboursement,AD003,AD017,DOS017
+REC018,2024-03-03,"Le ticket modérateur de 25% appliqué pour le dossier de ma fille Yasmine est plus élevé que d'habitude. Est-ce une erreur ?",EnTraitement,ticket_moderateur,AD003,AD017,DOS018
+REC019,2024-03-04,"Les frais de radiologie de mon fils Mehdi ne sont pas remboursés alors qu'ils sont prescrits. Quelle est la procédure ?",Resolu,radio,AD003,AD019,DOS019
+REC020,2024-03-05,"Je ne comprends pas pourquoi certains frais de ma fille Rym ne sont pas couverts. Pouvez-vous m'expliquer ?",EnTraitement,couverture,AD003,AD019,DOS020
+REC021,2024-03-06,"Le dossier de ma fille Slim a été rejeté pour documents manquants. Quels documents dois-je fournir ?",Resolu,documents_manquants,AD003,AD021,DOS021
+REC022,2024-03-07,"Je n'ai pas reçu de réponse à ma demande de complément d'information pour le dossier de ma fille Linda. Comment suivre ?",EnTraitement,delai_remboursement,AD003,AD021,DOS022
+REC023,2024-03-08,"Le délai de traitement du dossier de ma fille Rim est anormalement long. Y a-t-il un problème avec mon dossier ?",EnTraitement,delai_remboursement,AD003,AD023,DOS023
+REC024,2024-03-09,"La réclamation concernant le dossier de ma fille Sarra a été rejetée sans justification. Comment puis-je contester ?",EnTraitement,rejet,AD003,AD025,DOS024
+REC025,2024-03-10,"Les délais de remboursement pour le dossier de mon fils Anis sont beaucoup plus longs que d'habitude. Est-ce normal ?",Resolu,delai_remboursement,AD003,AD027,DOS025
+REC026,2024-03-11,"Le calcul des frais remboursés pour le dossier de ma fille Emna ne correspond pas à mes factures. Pouvez-vous vérifier ?",Resolu,montant_remboursement,AD003,AD029,DOS026
+REC027,2024-03-12,"Le dossier de ma fille Houda est urgent mais toujours en attente. Comment accélérer le traitement ?",EnTraitement,delai_remboursement,AD003,AD031,DOS027
+REC028,2024-03-13,"Je ne comprends pas la procédure de remboursement pour le dossier de ma fille Sirine. Pouvez-vous m'expliquer ?",EnTraitement,procedure,AD003,AD033,DOS028
+REC029,2024-03-14,"Le montant total remboursé pour le dossier de ma fille Meriem est incorrect. Comment est-il calculé ?",Resolu,montant_remboursement,AD003,AD035,DOS029
+REC030,2024-03-15,"La procédure de remboursement pour le dossier de ma fille Lamia a changé. Quelles sont les nouvelles règles ?",Resolu,procedure,AD003,AD037,DOS030
+REC031,2024-03-16,"Les frais de radiologie de ma fille Wafa ne sont pas remboursés. Quelle est la procédure à suivre ?",Resolu,radio,AD003,AD039,DOS031
+REC032,2024-03-17,"Le ticket modérateur de 25% pour le dossier de ma fille Amira a été modifié sans préavis. Est-ce une erreur ?",Resolu,ticket_moderateur,AD003,AD041,DOS032
+REC033,2024-03-18,"Des documents manquants ont été signalés pour le dossier de ma fille Rihab. Quels sont-ils exactement ?",Resolu,documents_manquants,AD003,AD043,DOS033
+REC034,2024-03-19,"Le délai de traitement du dossier de ma fille Imen est anormalement long. Y a-t-il un problème ?",Resolu,delai_remboursement,AD003,AD045,DOS034
+REC035,2024-03-20,"Je n'ai pas reçu de justification pour le rejet de ma réclamation concernant le dossier de ma fille Manel. Pourquoi ?",Resolu,rejet,AD003,AD047,DOS035
+REC036,2024-03-21,"Le rejet de ma réclamation pour le dossier de ma fille Nour n'est pas justifié. Comment puis-je contester ?",Resolu,rejet,AD003,AD049,DOS036
+REC037,2024-03-22,"Ma facture pour le dossier de mon fils Youssef a été rejetée car non conforme. Quelles sont les règles de conformité ?",Resolu,facture,AD003,AD001,DOS037
+REC038,2024-03-23,"La prise en charge des frais de ma fille Amira a été refusée. Pourquoi ?",Resolu,prise_en_charge,AD003,AD001,DOS038
+REC039,2024-03-24,"Je ne comprends pas pourquoi certains frais de ma fille Rania ne sont pas pris en charge. Pouvez-vous m'expliquer ?",Resolu,prise_en_charge,AD003,AD002,DOS039
+REC040,2024-03-25,"Le dossier de ma fille Rania a été rejeté pour erreur d'identification. Comment corriger ?",Resolu,erreur_identification,AD003,AD002,DOS040
+REC041,2024-03-26,"Le rejet de ma réclamation pour le dossier de mon fils Youssef n'est pas justifié. Comment puis-je faire appel ?",Resolu,rejet,AD003,AD001,DOS041
+REC042,2024-03-27,"Mon ordonnance pour le dossier de ma fille Amira a été rejetée car illisible. Que dois-je faire ?",Resolu,ordonnance,AD003,AD001,DOS042
+REC043,2024-03-28,"Le calcul des frais remboursés pour le dossier de ma fille Rania est incorrect. Comment est-il effectué ?",Resolu,montant_remboursement,AD003,AD002,DOS043
+REC044,2024-03-29,"Je n'ai pas reçu d'information sur le statut du remboursement du dossier de mon fils Youssef. Comment le suivre ?",Resolu,delai_remboursement,AD003,AD001,DOS044
+REC045,2024-03-30,"Le montant remboursé pour le dossier de ma fille Amira ne correspond pas à mes dépenses. Pouvez-vous vérifier ?",Resolu,montant_remboursement,AD003,AD001,DOS045
+REC046,2024-03-31,"Je n'ai pas reçu de réponse à ma demande d'information concernant le dossier de ma fille Rania. Comment suivre ?",Resolu,delai_remboursement,AD003,AD002,DOS046
+REC047,2024-04-01,"Des documents incomplets ont été signalés pour le dossier de mon fils Youssef. Quels sont les documents manquants ?",Resolu,documents_manquants,AD003,AD001,DOS047
+REC048,2024-04-02,"Le délai de traitement du dossier de ma fille Amira est trop long. Comment accélérer le processus ?",Resolu,delai_remboursement,AD003,AD001,DOS048
+REC049,2024-04-03,"Je n'ai pas reçu de réponse à ma réclamation concernant le dossier de ma fille Rania. Comment puis-je la suivre ?",Resolu,delai_remboursement,AD003,AD002,DOS049
+REC050,2024-04-04,"Une erreur administrative a été signalée pour le dossier de mon fils Youssef. Comment la corriger ?",Resolu,erreur_administrative,AD003,AD001,DOS050 

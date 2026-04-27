@@ -1,0 +1,100 @@
+[tool.poetry]
+name = "insurance-assistant"
+version = "0.1.0"
+description = "An insurance assistant powered by LangChain and LangGraph"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+langchain = "0.3.15"
+langchain-community = "0.3.15"
+langchain-core = "0.3.31"
+langchain-experimental = "0.3.4"
+langchain-openai = "<0.3.0"
+langgraph = {extras = ["redis"], version = "^0.5.3"}
+redis = "^6.2.0"
+langgraph-sdk = ">=0.1.61"
+pydub = "^0.25.1"
+openai = "^1.18.0"
+fastapi = "0.115.6"
+numpy = "1.26.4"
+pandas = "2.2.3"
+python-dotenv = "1.0.1"
+pydantic = "2.10.5"
+httpx = ">=0.25.2,<0.28.0"
+regex = ">=2024.9.11"
+litellm = "^1.66.0"
+plotly = "^6.0.1"
+uvicorn = "^0.34.1"
+mysql-connector-python = "^9.2.0"
+colorama = "^0.4.6"
+langgraph-cli = {extras = ["inmem"], version = "^0.2.3"}
+gradio = "^5.25.2"
+nest-asyncio = "^1.5.8"
+jupyter = "^1.1.1"
+notebook = "^7.4.2"
+faiss-cpu = "^1.11.0"
+trustcall = "^0.0.39"
+matplotlib = "^3.10.3"
+bcrypt = "^4.3.0"
+seaborn = "^0.13.2"
+sentence-transformers = "^5.0.0"
+resend = "^2.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.1.0"
+ipykernel = "^6.29.5"
+pylint = "^3.3.4"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+ruff = ">=0.9.3"
+black = "^23.12.1"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+chat = "tests.interactive_chat:run_interactive_chat"
+gradio-ui = "notebooks.gradio_app:main"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+# Enable ruff's formatter (like Black)
+format.quote-style = "double"
+
+[tool.ruff.lint]
+# Enable Pyflakes (F), isort (I), black formatter (B), and some pylint rules (PL)
+select = ["E", "F", "I", "B", "PL", "W", "UP"]
+# Exclude the most frustrating rules
+ignore = [
+    # Too many arguments/statements/branching
+    "PLR0913", "PLR0915", "PLR0912", "PLR0911",
+    # Too many attributes/public methods
+    "PLR0904",
+    # Magic values
+    "PLR2004",
+    # Unused arguments
+    "ARG001", "ARG002",
+    # Too complex
+    "C901",
+    # Redefined loop name
+    "PLW2901",
+    # Line too long (handled by formatter)
+    "E501",
+    # Exception chaining with from
+    "B904",
+    # Bare except clause
+    "E722",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["PLR2004", "E501"]
